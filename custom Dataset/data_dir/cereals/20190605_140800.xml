@@ -1,0 +1,38 @@
+<annotation>
+	<folder>cereals</folder>
+	<filename>20190605_140800.jpg</filename>
+	<path>/home/marc/PycharmProjects/ComputerVisionProject/custom Dataset/data_dir/cereals/20190605_140800.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>800</width>
+		<height>600</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>nutella</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>175</xmin>
+			<ymin>205</ymin>
+			<xmax>362</xmax>
+			<ymax>570</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>cereals</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>335</xmin>
+			<ymin>15</ymin>
+			<xmax>523</xmax>
+			<ymax>414</ymax>
+		</bndbox>
+	</object>
+</annotation>

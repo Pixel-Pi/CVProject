@@ -1,0 +1,26 @@
+<annotation>
+	<folder>cereals</folder>
+	<filename>91eLYHsCNML._SY445_.jpg</filename>
+	<path>/home/marc/PycharmProjects/ComputerVisionProject/custom Dataset/data_dir/cereals/91eLYHsCNML._SY445_.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>256</width>
+		<height>445</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>cereals</name>
+		<pose>Unspecified</pose>
+		<truncated>1</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>4</xmin>
+			<ymin>4</ymin>
+			<xmax>256</xmax>
+			<ymax>441</ymax>
+		</bndbox>
+	</object>
+</annotation>

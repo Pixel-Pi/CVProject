@@ -1,0 +1,26 @@
+<annotation>
+	<folder>nutella</folder>
+	<filename>nutella-1-kilo-D_NQ_NP_992846-MLA28968666527_122018-F.jpg</filename>
+	<path>/home/marc/PycharmProjects/ComputerVisionProject/custom Dataset/data_dir/nutella/nutella-1-kilo-D_NQ_NP_992846-MLA28968666527_122018-F.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>800</width>
+		<height>1067</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>nutella</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>72</xmin>
+			<ymin>65</ymin>
+			<xmax>677</xmax>
+			<ymax>952</ymax>
+		</bndbox>
+	</object>
+</annotation>

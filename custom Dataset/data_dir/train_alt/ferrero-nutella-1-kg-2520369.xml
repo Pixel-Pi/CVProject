@@ -1,0 +1,26 @@
+<annotation>
+	<folder>nutella</folder>
+	<filename>ferrero-nutella-1-kg-2520369.jpg</filename>
+	<path>/home/marc/PycharmProjects/ComputerVisionProject/custom Dataset/data_dir/nutella/ferrero-nutella-1-kg-2520369.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>380</width>
+		<height>285</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>nutella</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>105</xmin>
+			<ymin>13</ymin>
+			<xmax>275</xmax>
+			<ymax>279</ymax>
+		</bndbox>
+	</object>
+</annotation>

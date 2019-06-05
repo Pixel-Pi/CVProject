@@ -1,0 +1,26 @@
+<annotation>
+	<folder>nutella</folder>
+	<filename>IMG_6268.JPG</filename>
+	<path>/home/marc/PycharmProjects/ComputerVisionProject/custom Dataset/data_dir/nutella/IMG_6268.JPG</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>4032</width>
+		<height>3024</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>nutella</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>811</xmin>
+			<ymin>514</ymin>
+			<xmax>3392</xmax>
+			<ymax>2421</ymax>
+		</bndbox>
+	</object>
+</annotation>

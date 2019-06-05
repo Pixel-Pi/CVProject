@@ -1,0 +1,26 @@
+<annotation>
+	<folder>nutella</folder>
+	<filename>61MF2l+n3uL._SY445_.jpg</filename>
+	<path>/home/marc/PycharmProjects/ComputerVisionProject/custom Dataset/data_dir/nutella/61MF2l+n3uL._SY445_.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>292</width>
+		<height>445</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>nutella</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>6</xmin>
+			<ymin>6</ymin>
+			<xmax>284</xmax>
+			<ymax>438</ymax>
+		</bndbox>
+	</object>
+</annotation>

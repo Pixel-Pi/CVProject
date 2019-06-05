@@ -1,0 +1,26 @@
+<annotation>
+	<folder>cereals</folder>
+	<filename>IMG_6331.JPG</filename>
+	<path>/home/marc/PycharmProjects/ComputerVisionProject/custom Dataset/data_dir/cereals/IMG_6331.JPG</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>800</width>
+		<height>600</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>cereals</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>256</xmin>
+			<ymin>104</ymin>
+			<xmax>567</xmax>
+			<ymax>457</ymax>
+		</bndbox>
+	</object>
+</annotation>

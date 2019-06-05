@@ -1,0 +1,26 @@
+<annotation>
+	<folder>nutella</folder>
+	<filename>bio-und-oder-faires-nutella_1536143464_desktop.jpg</filename>
+	<path>/home/marc/PycharmProjects/ComputerVisionProject/custom Dataset/data_dir/nutella/bio-und-oder-faires-nutella_1536143464_desktop.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>660</width>
+		<height>440</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>nutella</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>171</xmin>
+			<ymin>5</ymin>
+			<xmax>489</xmax>
+			<ymax>432</ymax>
+		</bndbox>
+	</object>
+</annotation>
