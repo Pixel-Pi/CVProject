@@ -53,13 +53,13 @@ from object_detection.utils import visualization_utils as vis_util
 
 
 # What model to download.
-MODEL_NAME = './models/research/object_detection/nutellagraph'
+MODEL_NAME = 'shopmodel2'
 
 # Path to frozen detection graph. This is the actual model that is used for the object detection.
 PATH_TO_FROZEN_GRAPH = MODEL_NAME + '/frozen_inference_graph.pb'
 
 # List of the strings that is used to add correct label for each box.
-PATH_TO_LABELS = os.path.join('./models/research/object_detection/training', 'label_map.pbtxt')
+PATH_TO_LABELS = os.path.join(MODEL_NAME, 'label_map.pbtxt')
 
 
 # ## Load a (frozen) Tensorflow model into memory.
@@ -112,7 +112,7 @@ TEST_IMAGE_PATHS = [ os.path.join(PATH_TO_TEST_IMAGES_DIR, 'image{}.jpg'.format(
 IMAGE_SIZE = (12, 8)
 
 config = tf.ConfigProto()
-config.gpu_options.allow_growth = True
+
 
 with detection_graph.as_default():
     sess=tf.Session(config=config)
