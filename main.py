@@ -53,7 +53,7 @@ from object_detection.utils import visualization_utils as vis_util
 
 
 # What model to download.
-MODEL_NAME = 'shopmodel2'
+MODEL_NAME = 'shopmodel3'
 
 # Path to frozen detection graph. This is the actual model that is used for the object detection.
 PATH_TO_FROZEN_GRAPH = MODEL_NAME + '/frozen_inference_graph.pb'
