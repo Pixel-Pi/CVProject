@@ -19,7 +19,7 @@ var = tf.get_variable("weights", dtype=tf.float32, shape=(1, 64, 64, 3))
 val = img + var
 out = tf.identity(val, name="out")
 
-MODEL_NAME = 'shopmodel2'
+MODEL_NAME = 'shopmodel3'
 PATH_TO_FROZEN_GRAPH = MODEL_NAME + '/frozen_inference_graph.pb'
 PATH_TO_LABELS = os.path.join(MODEL_NAME, 'label_map.pbtxt')
 detection_graph = tf.Graph()
@@ -35,4 +35,4 @@ with tf.Session() as sess:
   sess.run(tf.global_variables_initializer())
   converter = tf.lite.TFLiteConverter.from_session(sess, [img], [out])
   tflite_model = converter.convert()
-  open("converted_model.tflite", "wb").write(tflite_model)
+  open("converted_" + MODEL_NAME + ".tflite", "wb").write(tflite_model)
