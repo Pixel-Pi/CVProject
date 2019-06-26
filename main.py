@@ -157,8 +157,14 @@ def run_inference_for_single_image(image, graph):
 
 camera = cv2.VideoCapture(0)
 
+# Initialize frame rate calculation
+frame_rate_calc = 1
+freq = cv2.getTickFrequency()
+font = cv2.FONT_HERSHEY_SIMPLEX
+
 while True:
     ret, image_np = camera.read()
+    t1 = cv2.getTickCount()
   # Expand dimensions since the model expects images to have shape: [1, None, None, 3]
     image_np_expanded = np.expand_dims(image_np, axis=0)
   # Actual detection.
@@ -173,7 +179,13 @@ while True:
       instance_masks=output_dict.get('detection_masks'),
       use_normalized_coordinates=True,
       line_thickness=8)
+
+    cv2.putText(image_np,"FPS: {0:.2f}".format(frame_rate_calc),(30,50),font,1,(255,255,0),2,cv2.LINE_AA)
     cv2.imshow('Camera feed', cv2.resize(image_np, (800, 600)))
+    t2 = cv2.getTickCount()
+    time1 = (t2-t1)/freq
+    frame_rate_calc = 1/time1
+
     if cv2.waitKey(25) & 0xFF == ord('q'):
         cv2.destroyAllWindows()
         break
