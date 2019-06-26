@@ -161,6 +161,10 @@ camera = cv2.VideoCapture(0)
 frame_rate_calc = 1
 freq = cv2.getTickFrequency()
 font = cv2.FONT_HERSHEY_SIMPLEX
+framecount = 0
+totalframes  = 0
+minframecount = 100
+maxframecount = 0
 
 while True:
     ret, image_np = camera.read()
@@ -185,7 +189,18 @@ while True:
     t2 = cv2.getTickCount()
     time1 = (t2-t1)/freq
     frame_rate_calc = 1/time1
+    framecount = framecount + 1
+    totalframes = totalframes + frame_rate_calc
+    if(minframecount>frame_rate_calc):
+        minframecount=frame_rate_calc
+
+    if( maxframecount < frame_rate_calc ):
+        maxframecount = frame_rate_calc
 
     if cv2.waitKey(25) & 0xFF == ord('q'):
         cv2.destroyAllWindows()
         break
+
+print("Average Framerate: " + str(totalframes/framecount))
+print("Min framerate: " + str(minframecount))
+print("Max Framerate: " + str(maxframecount))

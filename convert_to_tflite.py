@@ -34,5 +34,6 @@ with detection_graph.as_default():
 with tf.Session() as sess:
   sess.run(tf.global_variables_initializer())
   converter = tf.lite.TFLiteConverter.from_session(sess, [img], [out])
+  #converter.optimizations =  [tf.lite.Optimize.OPTIMIZE_FOR_SIZE]
   tflite_model = converter.convert()
   open("converted_" + MODEL_NAME + ".tflite", "wb").write(tflite_model)
