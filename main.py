@@ -1,25 +1,13 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Object Detection Demo
-# Welcome to the object detection inference walkthrough!  This notebook will walk you step by step through the process of using a pre-trained model to detect objects in an image. Make sure to follow the [installation instructions](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/installation.md) before you start.
-
-# # Imports
-
 import numpy as np
 import os
-import six.moves.urllib as urllib
 import sys
-import tarfile
 import tensorflow as tf
-import zipfile
 import cv2
 
 from distutils.version import StrictVersion
-from collections import defaultdict
-from io import StringIO
-from matplotlib import pyplot as plt
-from PIL import Image
 
 # This will add the location of the object detection api.
 sys.path.append("./models/research/")
@@ -30,30 +18,14 @@ if StrictVersion(tf.__version__) < StrictVersion('1.12.0'):
 
 
 
-# ## Object detection imports
-# Here are the imports from the object detection module.
-
-# In[23]:
-
-
+# Object detection imports
 from object_detection.utils import label_map_util
 
 from object_detection.utils import visualization_utils as vis_util
 
 
-# # Model preparation 
-
-# ## Variables
-# 
-# Any model exported using the `export_inference_graph.py` tool can be loaded here simply by changing `PATH_TO_FROZEN_GRAPH` to point to a new .pb file.  
-# 
-# By default we use an "SSD with Mobilenet" model here. See the [detection model zoo](https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md) for a list of other models that can be run out-of-the-box with varying speeds and accuracies.
-
-# In[25]:
-
-
-# What model to download.
-MODEL_NAME = 'shopmodel3'
+# Model preparation
+MODEL_NAME = 'shopmodel2'
 
 # Path to frozen detection graph. This is the actual model that is used for the object detection.
 PATH_TO_FROZEN_GRAPH = MODEL_NAME + '/frozen_inference_graph.pb'
@@ -62,10 +34,7 @@ PATH_TO_FROZEN_GRAPH = MODEL_NAME + '/frozen_inference_graph.pb'
 PATH_TO_LABELS = os.path.join(MODEL_NAME, 'label_map.pbtxt')
 
 
-# ## Load a (frozen) Tensorflow model into memory.
-
-# In[27]:
-
+# Load a (frozen) Tensorflow model into memory.
 
 detection_graph = tf.Graph()
 with detection_graph.as_default():
@@ -76,40 +45,10 @@ with detection_graph.as_default():
     tf.import_graph_def(od_graph_def, name='')
 
 
-# ## Loading label map
-# Label maps map indices to category names, so that when our convolution network predicts `5`, we know that this corresponds to `airplane`.  Here we use internal utility functions, but anything that returns a dictionary mapping integers to appropriate string labels would be fine
-
-# In[28]:
-
+# Loading label map
 
 category_index = label_map_util.create_category_index_from_labelmap(PATH_TO_LABELS, use_display_name=True)
 
-
-# ## Helper code
-
-# In[29]:
-
-
-def load_image_into_numpy_array(image):
-  (im_width, im_height) = image.size
-  return np.array(image.getdata()).reshape(
-      (im_height, im_width, 3)).astype(np.uint8)
-
-
-# # Detection
-
-# In[30]:
-
-
-# For the sake of simplicity we will use only 2 images:
-# image1.jpg
-# image2.jpg
-# If you want to test the code with your images, just add path to the images to the TEST_IMAGE_PATHS.
-PATH_TO_TEST_IMAGES_DIR = 'test_images'
-TEST_IMAGE_PATHS = [ os.path.join(PATH_TO_TEST_IMAGES_DIR, 'image{}.jpg'.format(i)) for i in range(1, 3) ]
-
-# Size, in inches, of the output images.
-IMAGE_SIZE = (12, 8)
 
 config = tf.ConfigProto()
 
